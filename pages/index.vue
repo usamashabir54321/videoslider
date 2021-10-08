@@ -6,7 +6,7 @@
 				<div :class="[ sideBar ? 'active' : '' ]" class="toggle" @click="sideBar = !sideBar"></div>
 			</header>
 			<div v-for="(vd , index) in vids" :key="index">
-				<video v-show="index == selectVid" muted loop autoplay><source :src="`/video/${vd.src}.mp4`" type="video/mp4"></video>
+				<video v-show="index == selectVid" muted loop autoplay><source :src="`https://attakus.masoodapp.com//video/${vd.src}.mp4`" type="video/mp4"></video>
 			</div>
 			<div class="overlay"></div>
 			<div class="text">
@@ -54,7 +54,7 @@
 		fetchDelay: 1000,
 		methods: {
 			async myImgArrs() {
-				const data = [{src:'1'},{src:'2'},{src:'3'},{src:'4'},{src:'5'},{src:'6'},{src:'7'},{src:'8'},{src:'9'},{src:'10'},{src:'11'},{src:'12'},{src:'13'}];
+				const data = [{src:'1'},{src:'2'},{src:'3'},{src:'4'},{src:'5'},{src:'6'},{src:'7'},{src:'8'},{src:'9'},{src:'10'}];
 				const result = await data;
 				result.forEach((vid) => {
 					this.vids.push(vid)
